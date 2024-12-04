@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Flask Project</title>
-</head>
-<body>
-    <h1>Welcome to Flask</h1>
-    <p>Current user: {{ current_name }}</p>
+{% extends "base.html" %}
 
-    <h2>Available Links:</h2>
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Flask</h1>
+    <h2>Test</h2>
+
+    <p>Madhu's Website</p>
+
     <ul>
         {% for name in names %}
             {% if name == 'admin' %}
@@ -17,5 +19,4 @@
             {% endif %}
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

@@ -6,10 +6,10 @@ app = Flask(__name__)
 def hello_world():
     return "Hello, welcome to my Flask project!"
 
-@app.route('/home/<name>')
-def home(name):
+@app.route('/')
+def home():
     # Pass the `name` parameter and a list of names to the template
-    return render_template('index.html', current_name=name, names=['name', 'admin'])
+    return render_template('index.html', content="madhu")
 
 if __name__ == '__main__':
     app.run(debug=True)
