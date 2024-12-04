@@ -1,12 +1,21 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>AIML API</title>
+    <title>Flask Project</title>
 </head>
 <body>
-    <h1>Welcome to AIML API</h1>
-    <p>AIML API is a simple API that allows you to interact with AIML chatbots.</p>
-    <p>For more information, please visit the <a href="
-       
-    ">Hello {{name}} </a> page.</p>
+    <h1>Welcome to Flask</h1>
+    <p>Current user: {{ current_name }}</p>
+
+    <h2>Available Links:</h2>
+    <ul>
+        {% for name in names %}
+            {% if name == 'admin' %}
+                <li><a href="/admin">Admin</a></li>
+            {% elif name == 'name' %}
+                <li><a href="/name">Name</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </body>
 </html>
